@@ -1,0 +1,74 @@
+1 Show the output for the following snippet.
+<? php
+$capital=67;
+print(“Variable capital is $capital”);
+print(“Variable CaPiTaL is $CaPiTaL”);
+?>
+ANSWER
+<?php
+$capital = 67;
+print("Variable capital is $capital"); 
+print("Variable CaPiTaL is $CaPiTaL"); 
+?>
+
+output
+Variable capital is 67
+Warning: Undefined variable $CaPiTaL in /tmp/KFgLjI92On/main.php on line 4
+Variable CaPiTaL is 
+
+=== Code Execution Successful ===
+
+2. Create a PHP program to display the division table using for-loop.
+1 2 3
+1 1 0.5 0.33
+2 2 1 0.66
+3 3 1.5 1
+ANSWER
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Division Table</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Division Table</h3>
+
+<table>
+    <tr>
+        <td></td>
+        <?php
+        for ($i = 1; $i <= 3; $i++) {
+            echo "<td>$i</td>";
+        }
+        ?>
+    </tr>
+    
+    <?php
+    for ($i = 1; $i <= 3; $i++) {
+        echo "<tr>";
+        echo "<td>$i</td>";
+        for ($j = 1; $j <= 3; $j++) {
+            $result = $i / $j;
+            echo "<td>" . round($result, 2) . "</td>";
+        }
+        echo "</tr>";
+    }
+    ?>
+</table>
+
+</body>
+</html>
+OUTPUT
+      1     2     3
+1    1.00  0.50  0.33
+2    2.00  1.00  0.67
+3    3.00  1.50  1.00
+

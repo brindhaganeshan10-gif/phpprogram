@@ -1,0 +1,133 @@
+3 3. Imagine you are building a personal portfolio website. Design a web page layout that
+includes a header, a navigation menu, a main content area for displaying your projects
+and a footer. Explain how you would structure the HTML code and apply CSS styles to
+achieve the desired layout and visual design.
+ANSWER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #34495e;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .projects h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .project {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 5px solid #1abc9c;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>John Doe</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="projects">
+            <h2>My Projects</h2>
+
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A clean and responsive portfolio built with HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <div class="project">
+                <h3>Weather App</h3>
+                <p>A web application that displays weather updates using an external API.</p>
+            </div>
+
+            <div class="project">
+                <h3>To-Do List</h3>
+                <p>A simple task management app with add, edit, and delete functions.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 John Doe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
